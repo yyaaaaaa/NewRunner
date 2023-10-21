@@ -1,18 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bootstrap : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] LevelManager levelManager;
+    [SerializeField] SaveManager saveManager;
+    [SerializeField] UIManager UIManager;
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        DontDestroyOnLoad(this);
+        levelManager.Initilize();
+        saveManager.Initilize();
+        UIManager.Initilize();
     }
 }

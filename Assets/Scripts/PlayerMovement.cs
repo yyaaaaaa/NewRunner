@@ -1,6 +1,5 @@
-using System;
 using UnityEngine;
-using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
+
 
 public class PlayerMovement : MonoBehaviour
 {
