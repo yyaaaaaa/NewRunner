@@ -5,9 +5,10 @@ using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed = 1f;
-    private void FixedUpdate()
+    private void Update()
     {
         transform.position += new Vector3(0f, 0f, speed) * Time.deltaTime;
+
         if(Input.touchCount != 0) 
         {
             HandleMovement();
