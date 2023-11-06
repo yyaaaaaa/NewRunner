@@ -1,34 +1,25 @@
-using System;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
     [SerializeField] bool goodPortal = true;
-    private Vector3 change = new Vector3(0.1f, 0.1f, 0.1f);
+    [SerializeField] float amount = 0.1f;
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag(TagManager.PLAYER_TAG))
+        PlayerLogic player = other.GetComponent<PlayerLogic>();
+        PortalAction(player);      
+    }
+    private void PortalAction(PlayerLogic player)
+    {
+        if (goodPortal)
         {
-            GameObject player = other.gameObject;
-            if (goodPortal)
-            {
-                GoodPortalAction(player);
-            }
-            else
-            {
-                BadPortalAction(player);
-            }
+            player.ChangeScale(new Vector3(amount, amount, amount));
         }
-    }
-
-    private void BadPortalAction(GameObject player)
-    {
-        player.transform.localScale -= change;
-    }
-
-    private void GoodPortalAction(GameObject player)
-    {
-        player.transform.localScale += change;
+        else
+        {
+            player.ChangeScale(-new Vector3(amount, amount, amount));
+        }
+        Destroy(transform.parent.gameObject);
     }
 }
