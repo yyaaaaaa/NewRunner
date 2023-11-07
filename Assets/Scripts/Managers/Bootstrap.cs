@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Bootstrap : MonoBehaviour
@@ -15,7 +16,7 @@ public class Bootstrap : MonoBehaviour
         UIManager.Initilize();
         levelManager.Initilize();
         saveManager.Initilize();
-        LoadingScreen.SetActive(false);
         player.SetActive(true);
+        LoadingScreen.SetActive(false);
     }
 }

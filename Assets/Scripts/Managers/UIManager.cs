@@ -20,7 +20,6 @@ public class UIManager : Singleton<UIManager>
         {
             containers[kvp.name] = kvp.container;
         }
-
         isPlaying = false;
         currentName = "MainMenu";
         WorkWithContainer(currentName , true);
@@ -29,6 +28,7 @@ public class UIManager : Singleton<UIManager>
     public void StartGame()
     {
         isPlaying = true;
+        player.animator.SetBool("isPlaying", true);
         WorkWithContainer(currentName, false);
         currentName = "Game";
         WorkWithContainer(currentName, true);
