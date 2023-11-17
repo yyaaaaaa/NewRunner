@@ -360,6 +360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &120488527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -472,6 +474,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &154247849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -584,6 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodPortal: 1
   amount: 0.1
+  dark: 1
 --- !u!65 &178938417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -696,6 +701,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &179858547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -808,6 +815,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &208017769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -920,6 +929,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &244898714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1032,6 +1043,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &257281085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1207,6 +1220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodPortal: 0
   amount: 0.1
+  dark: 0
 --- !u!1 &312465941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,6 +1509,7 @@ Transform:
   - {fileID: 1958985968}
   - {fileID: 1495244323}
   - {fileID: 1302814398}
+  - {fileID: 1038377636}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1593,7 +1608,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &685878202
 MonoBehaviour:
@@ -1634,6 +1649,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxScale: 3
   animator: {fileID: 643449173}
+  heromat: {fileID: 2100000, guid: 5d93418f35b08b1448db775bc8ac8d08, type: 2}
+  colorchange: {r: 0.1, g: 0.08, b: 0.06, a: 1}
 --- !u!1 &699189019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,14 +2251,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.008726558, y: 0, z: 0, w: 0.999962}
-  m_LocalPosition: {x: 0, y: 3.5, z: -10}
+  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 1, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2390,6 +2407,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971926568}
   m_CullTransparentMesh: 1
+--- !u!1 &1038377635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1038377636}
+  - component: {fileID: 1038377640}
+  - component: {fileID: 1038377639}
+  - component: {fileID: 1038377638}
+  - component: {fileID: 1038377637}
+  m_Layer: 0
+  m_Name: StartFinal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1038377636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038377635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 50.237}
+  m_LocalScale: {x: 6, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 641961629}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1038377637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038377635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411a5cdfed0f78f45b826531f79e04ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1038377638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038377635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c0c9f0c2251b3409930d247beaa406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1038377639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038377635}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1038377640
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038377635}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1040391971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2782,6 +2879,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &1086943926
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2894,6 +2993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodPortal: 0
   amount: 0.1
+  dark: 0
 --- !u!65 &1120447517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3006,6 +3106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &1122899097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3368,6 +3470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodPortal: 1
   amount: 0.1
+  dark: 1
 --- !u!65 &1254960392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3458,7 +3561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302814397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 48}
+  m_LocalPosition: {x: 0, y: 1.5, z: 89.54}
   m_LocalScale: {x: 6, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3644,6 +3747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodPortal: 0
   amount: 0.1
+  dark: 0
 --- !u!65 &1367911029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3756,6 +3860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &1368648361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3917,6 +4023,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 1
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &1392081171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4029,6 +4137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 1
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &1464318049
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4212,6 +4322,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 1
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &1544553714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4324,6 +4436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodPortal: 1
   amount: 0.1
+  dark: 1
 --- !u!65 &1567301893
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4436,6 +4549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodPortal: 0
   amount: 0.1
+  dark: 0
 --- !u!65 &1577243927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4548,6 +4662,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 1
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &1610713893
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5029,6 +5145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &1734697167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5763,6 +5881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &1983668256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5972,6 +6092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodPortal: 1
   amount: 0.1
+  dark: 1
 --- !u!1 &2042803542
 GameObject:
   m_ObjectHideFlags: 0
@@ -6252,6 +6373,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
+  dark: 0
+  rotationSpeed: 1
 --- !u!65 &2102860438
 BoxCollider:
   m_ObjectHideFlags: 0

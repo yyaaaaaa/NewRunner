@@ -4,13 +4,19 @@ public class Portal : MonoBehaviour
 {
     [SerializeField] bool goodPortal = true;
     [SerializeField] float amount = 0.1f;
-
+    [SerializeField] bool dark = false; 
     private void OnTriggerEnter(Collider other)
     {
         PlayerLogic player = other.GetComponent<PlayerLogic>();
         PortalAction(player);      
     }
     private void PortalAction(PlayerLogic player)
+    {
+        CheckScale(player);
+        CheckColor(player);
+        Destroy(transform.parent.gameObject);
+    }
+    private void CheckScale(PlayerLogic player)
     {
         if (goodPortal)
         {
@@ -20,6 +26,10 @@ public class Portal : MonoBehaviour
         {
             player.ChangeScale(-new Vector3(amount, amount, amount));
         }
-        Destroy(transform.parent.gameObject);
+    }
+
+    private void CheckColor(PlayerLogic player)
+    {
+        player.ChangeColor(dark);
     }
 }
