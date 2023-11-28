@@ -59,9 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a471e07567e9949ab570ebea4508f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodItem: 0
+  goodItem: 1
   amount: 0.05
-  dark: 1
+  dark: 0
   rotationSpeed: 1
 --- !u!1001 &690417918621548335
 PrefabInstance:

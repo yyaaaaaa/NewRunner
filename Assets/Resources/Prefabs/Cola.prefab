@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodItem: 0
   amount: 0.05
-  dark: 1
+  dark: 0
   rotationSpeed: 1
 --- !u!1001 &440586445462427251
 PrefabInstance:
