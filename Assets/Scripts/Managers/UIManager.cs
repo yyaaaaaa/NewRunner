@@ -70,14 +70,7 @@ public class UIManager : Singleton<UIManager>
     private void WorkWithContainer(string name, bool enable)
     {      
         containers.TryGetValue(name, out currentGO);
-        if (enable)
-        {
-            currentGO.SetActive(true);
-        }
-        else
-        {
-            currentGO.SetActive(false);
-        }
+        currentGO.SetActive(enable);
     }
 
     [Serializable]

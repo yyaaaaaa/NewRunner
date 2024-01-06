@@ -33,6 +33,10 @@ public class SaveManager : Singleton<SaveManager>
     public void ChangeLevel(int amount)
     {
         level += amount;
+        if (level >= 3)
+        {
+            level = 0;
+        }
         foreach(var item in leveltexts)
         {
             item.text = "Level " + level;
@@ -70,23 +74,7 @@ public class SaveManager : Singleton<SaveManager>
 
     public void ChangeScene()
     {
-        if (level == 0)
-        {
-            SceneManager.LoadScene("1");
-            return;
-        }
-
-        if (level % 2 != 0)
-        {
-            SceneManager.LoadScene("3");
-            return;
-        }
-        else
-        {
-            SceneManager.LoadScene("2");
-            return;
-        }
-        
+        SceneManager.LoadScene(level);
     }
 
     public void ChangeRewardText(int amount)

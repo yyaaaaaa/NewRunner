@@ -14,7 +14,6 @@ public class Portal : MonoBehaviour
     {
         CheckScale(player);
         CheckColor(player);
-        Destroy(transform.parent.gameObject);
     }
     private void CheckScale(PlayerLogic player)
     {
