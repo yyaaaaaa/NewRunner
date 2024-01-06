@@ -4,6 +4,7 @@ public class PlayerLogic : MonoBehaviour
 {
     [SerializeField] private float maxScale;
     private float currScale = 1f;
+    float startScale;
     public Animator animator;
     public Material heromat;
     [SerializeField] Color colorchange;
@@ -15,6 +16,7 @@ public class PlayerLogic : MonoBehaviour
     {
         mainCam = Camera.main;
         gameObject.SetActive(true);
+        startScale = transform.localScale.x;
         Reset();
     }
     public void ChangeScale(Vector3 change)
@@ -44,7 +46,7 @@ public class PlayerLogic : MonoBehaviour
     public void Reset()
     {
         transform.position = new Vector3 (0, 0.65f, 0);
-        transform.localScale = Vector3.one;
+        transform.localScale = new Vector3(startScale, startScale, startScale);
         animator.SetBool("isPlaying", false);
         heromat.color = defaultcolor;
         mainCam.GetComponent<FolowPlayer>().Reset();

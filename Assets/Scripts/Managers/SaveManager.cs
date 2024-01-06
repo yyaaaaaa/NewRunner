@@ -33,9 +33,9 @@ public class SaveManager : Singleton<SaveManager>
     public void ChangeLevel(int amount)
     {
         level += amount;
-        if (level >= 3)
+        if (level >= 5)
         {
-            level = 0;
+            level = 1;
         }
         foreach(var item in leveltexts)
         {
@@ -58,7 +58,13 @@ public class SaveManager : Singleton<SaveManager>
         if (playingFirstTime == 1)
         {
             coins = PlayerPrefs.GetInt("coins");
+
             level = PlayerPrefs.GetInt("level");
+            if (level >= 5)
+            {
+                level = 1;
+            }
+             
         }
         else
         {

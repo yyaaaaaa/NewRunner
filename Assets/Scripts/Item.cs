@@ -8,8 +8,9 @@ public class Item : MonoBehaviour
     [SerializeField] float rotationSpeed = 1f;
     private void OnTriggerEnter(Collider other)
     {
-        PlayerLogic player = other.GetComponent<PlayerLogic>();
-        ItemAction(player);
+        other.TryGetComponent(out PlayerLogic player);
+        if(player != null)
+            ItemAction(player);
     }
     private void Update()
     {
